@@ -1,11 +1,16 @@
 /* GLOBAL */
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: "Poppins";
 }
 
-p,h1,h2,h3,h4,h5{
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin: 0;
     padding: 0;
 }
@@ -19,54 +24,523 @@ p,h1,h2,h3,h4,h5{
     --bgDarkBlue: #001B43;
 }
 
-
-/* NAV */
-nav{
-    padding: 30px 0 !important;
+.container {
+    max-width: 90%;
 }
 
-nav .nav-link{
+
+/* Dekstop version */
+@media (min-width: 992px) {
+
+
+    nav .nav-link:hover::after {
+        content: '';
+        border-bottom: 3px solid var(--primary);
+        width: 50%;
+        display: block;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+    header {
+        padding-top: 80px;
+    }
+
+    header .jumboTitle {
+        font-size: 50px;
+    }
+
+    tentang .jumboTitle,
+    penghargaan .jumboTitle {
+        font-size: 40px;
+    }
+
+
+
+}
+
+/* NAV */
+nav {
+    padding: 30px 0 !important;
+    font-weight: 700;
+}
+
+nav .nav-link {
     width: 140px;
     margin: 0 15px;
     text-align: center;
 }
 
-nav .logo{
+nav .logo {
     margin: 0 50px;
 }
 
 /* HEADER */
+header {
+    /* padding: 30px 0 !important; */
+    background: linear-gradient(180deg, rgba(24, 137, 205, 0) 10%, rgba(24, 137, 205, 0.1) 100%);
+    margin: 0 20px !important;
+    border-radius: 15px;
+    /* background-image: linear-gradient(rgba(24, 137, 205, 0), #1889CD); */
+}
+
+header .jumboTitle {
+    margin-bottom: 20px;
+}
+
+header .jumboDesc {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header .embed-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* padding-bottom: 50%; */
+    /* - 16:9 aspect ratio (most common) */
+    /* padding-bottom: 62.5%; - 16:10 aspect ratio */
+    /* padding-bottom: 75%; - 4:3 aspect ratio */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+header .embed-video iframe,
+header .embed-video video,
+header .embed-video object,
+header .embed-video embed {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    border-radius: 15px;
+    width: 100%;
+    height: 550px;
+
+}
 
 /* MITRA */
+.mitra {
+    padding: 50px 0 !important;
+}
+
 
 /* TENTANG */
+.tentang {
+    padding: 100px 0px !important;
+    background-color: #E9F4FA;
+}
+
+.tentang .jumboTitle {
+    margin-bottom: 50px;
+}
+
+.tentang .card-tentang {
+    background-color: white;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.05);
+}
+
+.tentang .card-body {
+    padding: 0px;
+}
+
+.tentang img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.tentang h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.tentang p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.tentang a {
+    font-weight: 700;
+    text-decoration: none;
+}
 
 /* SEJARAH */
+.sejarah {
+    background-color: var(--primary);
+}
+
+.sejarah .content {
+    padding: 50px 76px 50px 100px;
+    /* padding: 0 76px 0 100px; */
+    color: white;
+}
+
+.sejarah h1 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.sejarah p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: justify;
+}
+
+.sejarah img {
+    width: 100%;
+    height: 100%;
+}
+
+.sejarah .col-6 {
+    padding: 0;
+}
+
 
 /* VISI MISI */
+.visimisi {
+    padding: 100px 0;
+}
+
+.visimisi h1 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.visimisi p,
+.visimisi ol {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: justify;
+}
 
 /* PENGHARGAAN  */
+.penghargaan {
+    padding: 100px 0px !important;
+    background-color: #E9F4FA;
+}
+
+.penghargaan .jumboTitle {
+    margin-bottom: 70px;
+}
+
+.penghargaan .card-penghargaan {
+    background-color: white;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.05);
+}
+
+.penghargaan .card-body-penghargaan {
+    padding: 0px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.penghargaan img {
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 25px;
+}
+
+.penghargaan h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    line-height: 40px;
+}
+
+.penghargaan p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.penghargaan a {
+    font-weight: 700;
+    text-decoration: none;
+}
 
 /* PRODUK */
+.produk {
+    padding: 100px 0 !important;
+    background-color: var(--primary);
+}
+
+.produk .jumboTitle {
+    margin-bottom: 70px;
+    color: white;
+}
+
+.produk .header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #030306;
+}
+
+.produk .akor {
+    margin-right: 20px;
+}
+
+.produk .icProduk {
+    width: 100%;
+    height: 100%;
+}
+
+.produk .accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button.collapsed::after {
+
+    background: url("../assets/plus.png");
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+
+    background: url("../assets/minus.svg");
+    width: 30px !important;
+    height: 30px !important;
+
+}
+
+.accordion-button:not(.collapsed)::after .header {
+
+    background: #C2E5FD;
+
+}
+
+.produk .detailProduk {
+    border-radius: 0px 0px 4px 4px;
+}
+
+.produk .descProduk {
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+}
+
 
 /* BERITA */
+.berita {
+    padding: 100px 0 !important;
+    background-color: #E9F4FA;
+}
+
+.berita .jumboTitle {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 85px;
+}
+
+.berita .card-berita {
+    background-color: white;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.05);
+}
+
+.berita .card-body-berita {
+    padding: 0px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.berita .kategoriEvent {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FF9900;
+    margin-bottom: 4px;
+}
+
+.berita .kategoriPengumuman {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #33A00D;
+    margin-bottom: 4px;
+}
+
+.berita .kategoriLoker {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FF0550;
+    margin-bottom: 4px;
+}
+
+.berita img {
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 25px;
+}
+
+.berita .card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+
+.berita .card-text {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.berita a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
 
 /* TESTIMONI */
+.testimoni {
+    padding: 140px 0 100px 0 !important;
+    background-color: #E9F4FA;
+}
+
+.testimoni .jumboTitle {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 70px;
+}
+
+.testimoni .card-testimoni {
+    background-color: white;
+    border-radius: 25px;
+    padding: 40px 28px 25px 25px;
+    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.05);
+}
+
+.testimoni img {
+    max-width: 100px;
+    margin-bottom: 6px;
+}
+
+.testimoni .card-body-testimoni {
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+.testimoni .card-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    margin-bottom: 20px;
+    padding: 0 !important;
+}
+
+.testimoni .card-profileDetail {
+    margin-left: 15px;
+}
+
+.testimoni .nama {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 4px;
+}
+
+.testimoni .siapa {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #AFAFAF;
+}
+
 
 /* GALERI */
+.galeri img {
+    width: 100%;
+    height: 100%;
+}
+
+.galeri .col {
+    padding: 0;
+}
 
 /* FOOTER */
+footer {
+    padding: 100px;
+    background-color: var(--bgDarkBlue);
+}
+
+footer .perusahaanInfo {
+    color: var(--white);
+    /* margin-left: 200px; */
+}
+
+footer .logo {
+    /* width: 100%;
+    height: 100%; */
+    width: 99px;
+    height: 55px;
+    margin-bottom: 26px;
+}
+
+footer .namaPerusahaan {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 12px;
+}
+
+footer .descPerusahaan {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    color: var(--gray);
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+footer .title {
+    margin-top: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--white);
+}
+
+footer a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
 
 
 /* HAPUS AJA */
-@import url("https://fonts.googleapis.com/css?family=Cabin+Condensed");
+/* @import url("https://fonts.googleapis.com/css?family=Cabin+Condensed"); */
 
-:root {
+/* :root {
     --light: white;
 }
 
 body {
-    background: black;
+    background: white;
     height: 170px;
 }
 
@@ -84,6 +558,4 @@ body {
     stroke-linejoin: miter;
     font-size: .5rem;
     font-family: "Cabin Condensed", sans-serif;
-}
-
-
+} */
